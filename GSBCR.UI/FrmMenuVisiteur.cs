@@ -24,7 +24,7 @@ namespace GSBCR.UI
                 //le visiteur doit être passé en paramètre par le menu de connexion
                 //Ici initialiser le visiteur en dur
                 //visiteur
-                leVisiteur = VisiteurManager.ChargerVisiteur("a131", "secret18");
+                leVisiteur = VisiteurManager.ChargerVisiteur("a131", "30BFD069");
                 //délégue
                 //leVisiteur = VisiteurManager.ChargerVisiteur("r58", "secret18");
                 //responsable
