@@ -71,10 +71,12 @@ namespace GSBCR.BLL
         {
             // Charge les rapports terminés (état = 2 ou 3) du visiteur
             List<int> etat = new List<int>();
+            List<string> matricule = new List<string>();
 
             etat.Add(2);etat.Add(3);
+            matricule.Add(m);
 
-            List<RAPPORT_VISITE> rapports = new RapportVisiteDAO().FindByEtatEtVisiteur(m,etat);
+            List<RAPPORT_VISITE> rapports = new RapportVisiteDAO().FindByEtatEtVisiteur(matricule,etat);
             
             return rapports;
         }

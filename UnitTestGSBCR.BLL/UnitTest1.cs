@@ -35,5 +35,17 @@ namespace UnitTestGSBCR.BLL
             }
             
         }
+
+        [TestMethod]
+        public void TestChargerRapportVisiteurFini()
+        {
+            List<RAPPORT_VISITE> lr = VisiteurManager.ChargerRapportVisiteurFinis("a131");
+
+            foreach(RAPPORT_VISITE rapport in lr)
+            {
+                Assert.AreEqual("a131", rapport.RAP_MATRICULE, "rapport visite n'appartient pas au matricule a131");
+                
+            }
+        }
     }
 }
