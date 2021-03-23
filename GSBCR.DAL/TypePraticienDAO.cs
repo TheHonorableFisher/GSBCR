@@ -33,6 +33,7 @@ namespace GSBCR.DAL
             }
             return pra;
         }
+        
 
         /// <summary>
         /// Charge tout les types de praticiens
