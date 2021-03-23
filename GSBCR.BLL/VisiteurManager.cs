@@ -69,8 +69,14 @@ namespace GSBCR.BLL
         /// <returns>List<RAPPORT_VISITE>/returns>
         public static List<RAPPORT_VISITE> ChargerRapportVisiteurFinis(String m)
         {
-            //A faire : charger les rapports terminés (état = 2 ou 3) du visiteur
-            return null;
+            // Charge les rapports terminés (état = 2 ou 3) du visiteur
+            List<int> etat = new List<int>();
+
+            etat.Add(2);etat.Add(3);
+
+            List<RAPPORT_VISITE> rapports = new RapportVisiteDAO().FindByEtatEtVisiteur(m,etat);
+            
+            return rapports;
         }
         
         /// <summary>

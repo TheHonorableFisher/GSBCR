@@ -34,6 +34,32 @@ namespace GSBCR.DAL
             return rv;
 
         }
+
+        public List<RAPPORT_VISITE> FindByEtatEtVisiteur(string matricule, List<int> lesEtats)
+        {
+            List<RAPPORT_VISITE> lesRapports = null;
+
+            using(var context = new GSB_visite_groupe1Entities())
+            {
+                string reqStr = "select * from RAPPORT_VISITE r where r.RAP_MATRICULE == ";
+                reqStr += matricule;
+                reqStr += " AND r.RAP-ETAT in(";
+                int i= 0;
+                foreach (int e in lesEtats)
+                {
+                    if (i != 0)
+                        reqStr += ",";
+                    else
+                        i++;
+                    reqStr += e;
+                }
+                reqStr += ")";
+                lesRapports = context.RAPPORT_VISITE.SqlQuery(reqStr).ToList<RAPPORT_VISITE>();
+            }
+
+            return lesRapports;
+        }
+
         /// <summary>
         /// Permet de créer une liste avec tous les rapports de visite de visiteurs qui ont un certain état
         /// </summary>
