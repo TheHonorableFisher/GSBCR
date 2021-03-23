@@ -58,6 +58,7 @@
     <Compile Include="RapportVisiteDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegionDAO.cs" />
+    <Compile Include="SecteurDAO.cs" />
     <Compile Include="TypePraticienDAO.cs" />
     <Compile Include="VaffectationDAO.cs" />
     <Compile Include="VisiteurDAO.cs" />

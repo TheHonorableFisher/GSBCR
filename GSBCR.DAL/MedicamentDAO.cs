@@ -12,10 +12,16 @@ namespace GSBCR.DAL
 {
     public class MedicamentDAO
     {
+        /// <summary>
+        /// Recherche un medicament sur son ID
+        /// </summary>
+        /// <param name="depot"></param>
+        /// <returns></returns>
         public MEDICAMENT FindById(string depot)
         {
             //rechercher un médicament par son nom de dépot
             MEDICAMENT med = null;
+
             using (var context = new GSB_visite_groupe1Entities())
             {
                 //désactiver le chargement différé
@@ -29,10 +35,15 @@ namespace GSBCR.DAL
             return med;
         }
 
+        /// <summary>
+        /// Recherche tout les medicaments
+        /// </summary>
+        /// <returns></returns>
         public List<MEDICAMENT> FindAll()
         {
             //charger tous les médicaments
             List<MEDICAMENT> meds = null;
+
             using (var context = new GSB_visite_groupe1Entities())
             {
                 //désactiver le chargement différé
@@ -46,10 +57,27 @@ namespace GSBCR.DAL
             
         }
 
+        /// <summary>
+        /// Recherche tout les médicaments appartenant à une même famille
+        /// </summary>
+        /// <param name="code"></param>
+        /// <returns></returns>
         public List<MEDICAMENT> FindByFamille(string code)
         {
-            //A faire : charger tous les médicaments d'une famille
-            return null;
+            // Charger tous les médicaments d'une famille par un code
+            List<MEDICAMENT> meds = null;
+
+            using(var context = new GSB_visite_groupe1Entities())
+            {
+                //désactiver le chargement différé
+                //context.Configuration.LazyLoadingEnabled = false;
+                var req = from m in context.MEDICAMENT.Include("laFamille")
+                          where m.FAM_CODE == code
+                          select m;
+                meds = req.ToList<MEDICAMENT>();
+            }
+
+            return meds;
         }
     }
 }
