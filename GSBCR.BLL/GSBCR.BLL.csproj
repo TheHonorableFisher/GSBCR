@@ -33,15 +33,7 @@
   <ItemGroup>
     <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\GSBCR.modele\bin\Debug\EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="GSBCR.DAL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\GSBCR.DAL\bin\Debug\GSBCR.DAL.dll</HintPath>
-    </Reference>
-    <Reference Include="GSBCR.modele, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\GSBCR.modele\bin\Debug\GSBCR.modele.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -55,6 +47,16 @@
     <Compile Include="DelegueManager.cs" />
     <Compile Include="VisiteurManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GSBCR.DAL\GSBCR.DAL.csproj">
+      <Project>{065145a2-f3ec-4edc-b31f-758c137a92e8}</Project>
+      <Name>GSBCR.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GSBCR.modele\GSBCR.modele.csproj">
+      <Project>{137af6c4-68c3-443b-afd3-3513e21d33f3}</Project>
+      <Name>GSBCR.modele</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
