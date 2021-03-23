@@ -17,6 +17,7 @@ namespace GSBCR.DAL
             //A faire : rechercher un type praticien par son code
             return null;
         }
+        
 
         public List<TYPE_PRATICIEN> FindAll()
         {
