@@ -34,6 +34,27 @@ namespace GSBCR.DAL
             return rv;
 
         }
+        /// <summary>
+        /// Permet de retourner tout les rapports de visite d'un visiteur
+        /// </summary>
+        /// <param name="m">Matricule du visiteur</param>
+        /// <returns></returns>
+        public List<RAPPORT_VISITE> FindAll(string m)
+        {
+            List<RAPPORT_VISITE> rv = null;
+            // écrire et exécuter la requête Linq
+            using (var context = new GSB_visite_groupe1Entities())
+            {
+                //désactiver le chargement différé
+                //context.Configuration.LazyLoadingEnabled = false;
+                var req = from r in context.RAPPORT_VISITE
+                          where r.RAP_MATRICULE == m
+                          select r;
+                rv = req.ToList<RAPPORT_VISITE>();
+
+            }
+            return rv;
+        }
 
         /// <summary>
         /// Permet de créer une liste avec tous les rapports de visite de visiteurs qui ont un certain état

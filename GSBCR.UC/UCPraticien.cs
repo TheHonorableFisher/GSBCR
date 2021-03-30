@@ -32,6 +32,7 @@ namespace GSBCR.UC
 
         public void ucPracticien_actualiser()
         {
+            txtbxNum.Text = lePraticien.PRA_NUM.ToString();
             txtbxNom.Text = lePraticien.PRA_NOM;
             txtbxPrenom.Text = lePraticien.PRA_PRENOM;
             txtbxVille.Text = lePraticien.PRA_VILLE;

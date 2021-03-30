@@ -94,5 +94,11 @@ namespace GSBCR.UI
         {
 
         }
+
+        private void lesPraticiensToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmConsulterPraticien f = new FrmConsulterPraticien(this.leVisiteur);
+            f.ShowDialog();
+        }
     }
 }
