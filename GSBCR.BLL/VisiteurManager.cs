@@ -94,6 +94,22 @@ namespace GSBCR.BLL
         }
         
         /// <summary>
+        /// Permet de retourner tout les rapports d'un visiteur avec un praticien donné
+        /// </summary>
+        /// <param name="idPra"></param>
+        /// <param name="idVis"></param>
+        /// <returns></returns>
+        public static List<RAPPORT_VISITE> ChargerRapportParPraticienEtVisiteur(short idPra, string idVis)
+        {
+            RapportVisiteDAO rapportDAO = new RapportVisiteDAO();
+            List<RAPPORT_VISITE> raps = new List<RAPPORT_VISITE>();
+
+            raps = rapportDAO.ChargerRapportParPraticienEtVisiteur(idPra, idVis);
+            return raps;
+        }
+
+
+        /// <summary>
         /// Permet de créer un rapport dans la base de données 
         /// </summary>
         /// <param name="r">objet rapport de visite</param>

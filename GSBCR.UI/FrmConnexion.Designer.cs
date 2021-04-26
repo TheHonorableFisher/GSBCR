@@ -35,6 +35,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
             this.txtMDP = new System.Windows.Forms.TextBox();
+            this.txtErreur = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnQuitter
@@ -46,16 +47,18 @@
             this.btnQuitter.TabIndex = 0;
             this.btnQuitter.Text = "Quitter";
             this.btnQuitter.UseVisualStyleBackColor = true;
+            this.btnQuitter.Click += new System.EventHandler(this.btnQuitter_Click);
             // 
             // btnValider
             // 
             this.btnValider.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnValider.Location = new System.Drawing.Point(522, 163);
+            this.btnValider.Location = new System.Drawing.Point(525, 226);
             this.btnValider.Name = "btnValider";
             this.btnValider.Size = new System.Drawing.Size(82, 28);
             this.btnValider.TabIndex = 1;
             this.btnValider.Text = "Valider";
             this.btnValider.UseVisualStyleBackColor = true;
+            this.btnValider.Click += new System.EventHandler(this.btnValider_Click);
             // 
             // label1
             // 
@@ -71,7 +74,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(205, 144);
+            this.label2.Location = new System.Drawing.Point(208, 207);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(38, 20);
             this.label2.TabIndex = 3;
@@ -81,7 +84,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(116, 189);
+            this.label3.Location = new System.Drawing.Point(119, 252);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(127, 20);
             this.label3.TabIndex = 4;
@@ -89,23 +92,34 @@
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(249, 146);
+            this.txtID.Location = new System.Drawing.Point(252, 209);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(100, 20);
             this.txtID.TabIndex = 5;
             // 
             // txtMDP
             // 
-            this.txtMDP.Location = new System.Drawing.Point(249, 188);
+            this.txtMDP.Location = new System.Drawing.Point(252, 251);
             this.txtMDP.Name = "txtMDP";
             this.txtMDP.Size = new System.Drawing.Size(100, 20);
             this.txtMDP.TabIndex = 6;
+            // 
+            // txtErreur
+            // 
+            this.txtErreur.AutoSize = true;
+            this.txtErreur.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtErreur.ForeColor = System.Drawing.Color.Red;
+            this.txtErreur.Location = new System.Drawing.Point(184, 132);
+            this.txtErreur.Name = "txtErreur";
+            this.txtErreur.Size = new System.Drawing.Size(0, 31);
+            this.txtErreur.TabIndex = 7;
             // 
             // FrmConnexion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtErreur);
             this.Controls.Add(this.txtMDP);
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.label3);
@@ -113,6 +127,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnValider);
             this.Controls.Add(this.btnQuitter);
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "FrmConnexion";
             this.Text = "FrmConnexion";
             this.ResumeLayout(false);
@@ -129,5 +144,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.TextBox txtMDP;
+        private System.Windows.Forms.Label txtErreur;
     }
 }

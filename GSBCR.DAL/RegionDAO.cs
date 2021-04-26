@@ -25,7 +25,7 @@ namespace GSBCR.DAL
             {
                 //désactiver le chargement différé
                 //context.Configuration.LazyLoadingEnabled = false;
-                var req = from r in context.REGION.Include("LeType")
+                var req = from r in context.REGION
                           where r.REG_CODE == code
                           select r;
                 reg = req.SingleOrDefault<REGION>();
@@ -46,7 +46,7 @@ namespace GSBCR.DAL
             {
                 //désactiver le chargement différé
                 //context.Configuration.LazyLoadingEnabled = false;
-                var req = from r in context.REGION.Include("LeType")
+                var req = from r in context.REGION
                           select r;
                 reg = req.ToList<REGION>();
             }
@@ -67,7 +67,7 @@ namespace GSBCR.DAL
             {
                 //désactiver le chargement différé
                 //context.Configuration.LazyLoadingEnabled = false;
-                var req = from r in context.REGION.Include("LeType")
+                var req = from r in context.REGION
                           where r.LeSecteur.SEC_CODE == secteurCode
                           select r;
                 reg = req.ToList<REGION>();

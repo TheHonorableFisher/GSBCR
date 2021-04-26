@@ -15,7 +15,7 @@ namespace GSBCR.UI
     {
         private VISITEUR leVisiteur;
         private VAFFECTATION leProfil;
-        public FrmMenuVisiteur()
+        public FrmMenuVisiteur(VISITEUR v)
         {
             InitializeComponent();
             // chargement du visiteur connecté et de son profil
@@ -24,12 +24,18 @@ namespace GSBCR.UI
                 //le visiteur doit être passé en paramètre par le menu de connexion
                 //Ici initialiser le visiteur en dur
                 //visiteur
-                leVisiteur = VisiteurManager.ChargerVisiteur("a131", "30BFD069");
+                //leVisiteur = VisiteurManager.ChargerVisiteur("a131", "30BFD069");
                 //délégue
                 //leVisiteur = VisiteurManager.ChargerVisiteur("r58", "secret18");
                 //responsable
                 //leVisiteur = VisiteurManager.ChargerVisiteur("r24", "secret18");
-                leProfil = VisiteurManager.ChargerAffectationVisiteur(leVisiteur.VIS_MATRICULE);
+                //leProfil = VisiteurManager.ChargerAffectationVisiteur(leVisiteur.VIS_MATRICULE);
+
+                // Initialisation des visiteurs
+
+                leVisiteur = v;
+                leProfil = VisiteurManager.ChargerAffectationVisiteur(v.VIS_MATRICULE);
+
                 if (leProfil.TRA_ROLE == "Délégué")
                 {
                     maRégionToolStripMenuItem.Enabled = true;

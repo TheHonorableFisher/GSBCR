@@ -17,10 +17,13 @@ namespace GSBCR.UI
     {
 
         List<RAPPORT_VISITE> rapports = null;
-
+        VISITEUR vis = null;
         public FrmConsulterPraticien(VISITEUR v)
         {
             InitializeComponent();
+
+            // Initialisation du visiteur actuelle
+            this.vis = v;
 
             // Initialisation de liste déroulante des praticiens
             List<PRATICIEN> lp = VisiteurManager.ChargerPraticiens();
@@ -45,15 +48,35 @@ namespace GSBCR.UI
 
         private void btnValider_Click(object sender, EventArgs e)
         {
+            bool isRapport = false;
+
             // On récupère le praticien choisit dans le formulaire
             PRATICIEN p = (PRATICIEN)(cbxPraticien.SelectedItem);
+
 
             // On attribue le praticien pour l'affichage
             ucPraticien1.LePraticien = p;
 
-            // TODO
-            // On affiche le boutton "voir rapport" si le visiteur possède des rapports avec le praticien renseigner
+            // On regarde si le Visiteur à des rapports avec le praticien selectionné
+            if(VisiteurManager.ChargerRapportParPraticienEtVisiteur(p.PRA_NUM,this.vis.VIS_MATRICULE).Count != 0)
+            {
+                isRapport = true;
+                this.rapports = VisiteurManager.ChargerRapportParPraticienEtVisiteur(p.PRA_NUM, this.vis.VIS_MATRICULE);
+            }
+            else
+            {
+                isRapport = false;
+            }
 
+            // On affiche le boutton "voir rapport" si le visiteur possède des rapports avec le praticien renseigner
+            if (isRapport)
+            {
+                btnVoirRapport.Show();
+            }
+            else
+            {
+                btnVoirRapport.Hide();
+            }
 
             // On affiche le praticien
             ucPraticien1.Visible = true;
@@ -61,7 +84,8 @@ namespace GSBCR.UI
 
         private void btnVoirRapport_Click(object sender, EventArgs e)
         {
-
+            FrmRapportEnCours frmRapportEnCours = new FrmRapportEnCours(this.vis, this.rapports);
+            frmRapportEnCours.ShowDialog();
         }
     }
 }

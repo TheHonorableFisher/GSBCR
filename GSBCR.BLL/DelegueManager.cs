@@ -27,6 +27,7 @@ namespace GSBCR.BLL
             }
             return lv;
         }
+
         /// <summary>
         /// Permet de charger les rapports non consultés (état 2) des visiteurs d'une région  
         /// </summary>
@@ -34,19 +35,13 @@ namespace GSBCR.BLL
         /// <returns>List<RAPPORT_VISITE>/returns>
         public static List<RAPPORT_VISITE> ChargerRapportRegionNonLus(String code)
         {
-            // Charger les rapports terminés et non lus (état = 2 ) des visiteurs d'une région
-            List<RAPPORT_VISITE> raps = null;
+            List<RAPPORT_VISITE> raps = new List<RAPPORT_VISITE>();
+            RapportVisiteDAO RapportDAO = new RapportVisiteDAO();
 
-            using(var context = new GSB_visite_groupe1Entities())
-            {
-                var req = from r in context.RAPPORT_VISITE.Include("Type")
-                          where r.RAP_ETAT == "2"
-                          select r;
-                raps = req.ToList<RAPPORT_VISITE>();
-            }
-
+            raps = RapportDAO.ChargerRapportRegionNonLu(code);
             return raps;
         }
+
         /// <summary>
         /// Permet de charger les rapports terminés et consultés (état 3) des visiteurs d'une région 
         /// </summary>
@@ -56,16 +51,10 @@ namespace GSBCR.BLL
         {
             // Charge les rapports terminés (état = 3) des visiteurs d'une région
 
-            List<RAPPORT_VISITE> raps = null;
+            List<RAPPORT_VISITE> raps = new List<RAPPORT_VISITE>();
+            RapportVisiteDAO RapportDAO = new RapportVisiteDAO();
 
-            using (var context = new GSB_visite_groupe1Entities())
-            {
-                var req = from rs in context.RAPPORT_VISITE.Include("Type")
-                          where rs.RAP_ETAT == "3"
-                          select rs;
-                raps = req.ToList<RAPPORT_VISITE>();
-            }
-
+            raps = RapportDAO.ChargerRapportRegionArchives(r);
             return raps;
         }
     }
