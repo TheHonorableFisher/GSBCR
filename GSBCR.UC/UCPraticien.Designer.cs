@@ -123,49 +123,56 @@
             // 
             this.txtbxPrenom.Location = new System.Drawing.Point(26, 370);
             this.txtbxPrenom.Name = "txtbxPrenom";
-            this.txtbxPrenom.Size = new System.Drawing.Size(100, 20);
+            this.txtbxPrenom.ReadOnly = true;
+            this.txtbxPrenom.Size = new System.Drawing.Size(117, 20);
             this.txtbxPrenom.TabIndex = 8;
             // 
             // txtbxNom
             // 
-            this.txtbxNom.Location = new System.Drawing.Point(29, 318);
+            this.txtbxNom.Location = new System.Drawing.Point(26, 318);
             this.txtbxNom.Name = "txtbxNom";
-            this.txtbxNom.Size = new System.Drawing.Size(100, 20);
+            this.txtbxNom.ReadOnly = true;
+            this.txtbxNom.Size = new System.Drawing.Size(117, 20);
             this.txtbxNom.TabIndex = 9;
             // 
             // txtbxNum
             // 
             this.txtbxNum.Location = new System.Drawing.Point(29, 261);
             this.txtbxNum.Name = "txtbxNum";
-            this.txtbxNum.Size = new System.Drawing.Size(100, 20);
+            this.txtbxNum.ReadOnly = true;
+            this.txtbxNum.Size = new System.Drawing.Size(114, 20);
             this.txtbxNum.TabIndex = 10;
             // 
             // txtbxNoto
             // 
             this.txtbxNoto.Location = new System.Drawing.Point(242, 33);
             this.txtbxNoto.Name = "txtbxNoto";
+            this.txtbxNoto.ReadOnly = true;
             this.txtbxNoto.Size = new System.Drawing.Size(138, 20);
             this.txtbxNoto.TabIndex = 11;
             // 
             // txtbxCP
             // 
-            this.txtbxCP.Location = new System.Drawing.Point(497, 261);
+            this.txtbxCP.Location = new System.Drawing.Point(477, 261);
             this.txtbxCP.Name = "txtbxCP";
-            this.txtbxCP.Size = new System.Drawing.Size(100, 20);
+            this.txtbxCP.ReadOnly = true;
+            this.txtbxCP.Size = new System.Drawing.Size(120, 20);
             this.txtbxCP.TabIndex = 12;
             // 
             // txtbxVille
             // 
-            this.txtbxVille.Location = new System.Drawing.Point(496, 318);
+            this.txtbxVille.Location = new System.Drawing.Point(477, 318);
             this.txtbxVille.Name = "txtbxVille";
-            this.txtbxVille.Size = new System.Drawing.Size(100, 20);
+            this.txtbxVille.ReadOnly = true;
+            this.txtbxVille.Size = new System.Drawing.Size(119, 20);
             this.txtbxVille.TabIndex = 13;
             // 
             // txtbxAdresse
             // 
-            this.txtbxAdresse.Location = new System.Drawing.Point(496, 370);
+            this.txtbxAdresse.Location = new System.Drawing.Point(477, 370);
             this.txtbxAdresse.Name = "txtbxAdresse";
-            this.txtbxAdresse.Size = new System.Drawing.Size(100, 20);
+            this.txtbxAdresse.ReadOnly = true;
+            this.txtbxAdresse.Size = new System.Drawing.Size(119, 20);
             this.txtbxAdresse.TabIndex = 14;
             // 
             // pictureBox1

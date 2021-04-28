@@ -21,7 +21,7 @@ namespace GSBCR.DAL
 
             using(var context = new GSB_visite_groupe1Entities())
             {
-                var req = from s in context.SECTEUR.Include("Type")
+                var req = from s in context.SECTEUR
                           where s.SEC_CODE == code
                           select s;
                 sec = req.SingleOrDefault<SECTEUR>();
@@ -35,7 +35,7 @@ namespace GSBCR.DAL
             List<SECTEUR> secs = null;
             using(var context = new GSB_visite_groupe1Entities())
             {
-                var req = from s in context.SECTEUR.Include("Type")
+                var req = from s in context.SECTEUR
                           select s;
                 secs = req.ToList<SECTEUR>();
             }

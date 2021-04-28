@@ -26,7 +26,7 @@ namespace GSBCR.DAL
             {
                 //désactiver le chargement différé
                 //context.Configuration.LazyLoadingEnabled = false;
-                var req = from r in context.TYPE_PRATICIEN.Include("LeType")
+                var req = from r in context.TYPE_PRATICIEN
                           where r.TYP_CODE == code
                           select r;
                 pra = req.SingleOrDefault<TYPE_PRATICIEN>();
@@ -48,7 +48,7 @@ namespace GSBCR.DAL
             {
                 //désactiver le chargement différé
                 //context.Configuration.LazyLoadingEnabled = false;
-                var req = from r in context.TYPE_PRATICIEN.Include("LeType")
+                var req = from r in context.TYPE_PRATICIEN
                           select r;
                 pras = req.ToList<TYPE_PRATICIEN>();
             }

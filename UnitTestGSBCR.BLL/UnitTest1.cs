@@ -44,7 +44,6 @@ namespace UnitTestGSBCR.BLL
             foreach(RAPPORT_VISITE rapport in lr)
             {
                 Assert.AreEqual("a131", rapport.RAP_MATRICULE, "rapport visite n'appartient pas au matricule a131");
-                
             }
         }
     }

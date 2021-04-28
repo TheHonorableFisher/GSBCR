@@ -25,6 +25,34 @@ namespace GSBCR.BLL
                 return null;
 
         }
+
+        /// <summary>
+        /// Permet de mettre à jour les informations d'un visiteur grâce à son matricule
+        /// </summary>
+        /// <param name="mat">Matricule du visiteur</param>
+        /// <param name="addr">Adresse du visiteur</param>
+        /// <param name="cp">Code Postal du visiteur</param>
+        /// <param name="ville">Ville du visiteur</param>
+
+
+        /// <returns>Booléen update (confirmer la modification)</returns>
+        public static bool updateVisiteur(String mat, String addr, String cp, String ville)
+        {
+            bool update = false;
+            try
+            {
+                new VisiteurDAO().updateVisiteur(mat, addr, cp, ville);
+                update = true;
+            }
+            catch (Exception ex) { throw ex; }
+
+            return update;
+        }
+
+
+
+
+
         /// <summary>
         /// Permet de charger la dernière affectation du visiteur
         /// et donc son profil (visiteur, délégué, responsabe secteur) et sa région
@@ -62,6 +90,18 @@ namespace GSBCR.BLL
             RAPPORT_VISITE r = new RapportVisiteDAO().FindById(m, n);
             return r;
         }
+
+        /// <summary>
+        /// Permet de charger tout les rapports de visite d'un visite
+        /// </summary>
+        /// <param name="m">matricule visiteur</param>
+        /// <returns></returns>
+        public static List<RAPPORT_VISITE> ChargerRapportVisite(string m)
+        {
+            List<RAPPORT_VISITE> r = new RapportVisiteDAO().FindAll(m);
+            return r;
+        }
+
         /// <summary>
         /// Permet de charger les rapports terminés du visiteur (état 2 et 3) 
         /// </summary>
@@ -81,6 +121,22 @@ namespace GSBCR.BLL
             return rapports;
         }
         
+        /// <summary>
+        /// Permet de retourner tout les rapports d'un visiteur avec un praticien donné
+        /// </summary>
+        /// <param name="idPra"></param>
+        /// <param name="idVis"></param>
+        /// <returns></returns>
+        public static List<RAPPORT_VISITE> ChargerRapportParPraticienEtVisiteur(short idPra, string idVis)
+        {
+            RapportVisiteDAO rapportDAO = new RapportVisiteDAO();
+            List<RAPPORT_VISITE> raps = new List<RAPPORT_VISITE>();
+
+            raps = rapportDAO.ChargerRapportParPraticienEtVisiteur(idPra, idVis);
+            return raps;
+        }
+
+
         /// <summary>
         /// Permet de créer un rapport dans la base de données 
         /// </summary>

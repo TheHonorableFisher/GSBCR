@@ -34,6 +34,27 @@ namespace GSBCR.DAL
             return rv;
 
         }
+        /// <summary>
+        /// Permet de retourner tout les rapports de visite d'un visiteur
+        /// </summary>
+        /// <param name="m">Matricule du visiteur</param>
+        /// <returns></returns>
+        public List<RAPPORT_VISITE> FindAll(string m)
+        {
+            List<RAPPORT_VISITE> rv = null;
+            // écrire et exécuter la requête Linq
+            using (var context = new GSB_visite_groupe1Entities())
+            {
+                //désactiver le chargement différé
+                //context.Configuration.LazyLoadingEnabled = false;
+                var req = from r in context.RAPPORT_VISITE
+                          where r.RAP_MATRICULE == m
+                          select r;
+                rv = req.ToList<RAPPORT_VISITE>();
+
+            }
+            return rv;
+        }
 
         /// <summary>
         /// Permet de créer une liste avec tous les rapports de visite de visiteurs qui ont un certain état
@@ -74,6 +95,67 @@ namespace GSBCR.DAL
             } 
             return lesRapports;
         }
+
+        /// <summary>
+        /// Retourne tout les rapports non consulté (état 2) des visiteur d'une région
+        /// </summary>
+        /// <param name="codeReg">code région</param>
+        /// <returns></returns>
+        public List<RAPPORT_VISITE> ChargerRapportRegionNonLu(string codeReg)
+        {
+            List<RAPPORT_VISITE> raps = null;
+
+            using (var context = new GSB_visite_groupe1Entities())
+            {
+                var req = from r in context.RAPPORT_VISITE
+                          where r.RAP_ETAT == "2"
+                          select r;
+                raps = req.ToList<RAPPORT_VISITE>();
+            }
+
+            return raps;
+        }
+
+        /// <summary>
+        ///  Charge les rapports de visite terminé et consulté d'une région et d'un visiteur
+        /// </summary>
+        /// <param name="code"></param>
+        /// <returns></returns>
+        public List<RAPPORT_VISITE> ChargerRapportRegionArchives(string code)
+        {
+            List<RAPPORT_VISITE> raps = new List<RAPPORT_VISITE>();
+
+            using (var context = new GSB_visite_groupe1Entities())
+            {
+                var req = from rs in context.RAPPORT_VISITE
+                          where rs.RAP_ETAT == "3"
+                          select rs;
+                raps = req.ToList<RAPPORT_VISITE>();
+            }
+
+            return raps;
+        }
+
+        /// <summary>
+        /// Permet de retourner tout les rapports d'un visiteurs avec un praticien
+        /// </summary>
+        /// <param name="idPra"></param>
+        /// <param name="idVis"></param>
+        /// <returns></returns>
+        public List<RAPPORT_VISITE> ChargerRapportParPraticienEtVisiteur(short idPra, string idVis)
+        {
+            List<RAPPORT_VISITE> raps = new List<RAPPORT_VISITE>();
+
+            using(var context = new GSB_visite_groupe1Entities())
+            {
+                var req = from r in context.RAPPORT_VISITE
+                          where r.RAP_PRANUM == idPra && r.RAP_MATRICULE == idVis
+                          select r;
+                raps = req.ToList<RAPPORT_VISITE>();
+            }
+            return raps;
+        }
+
 
         /// <summary>
         /// Permet de créer un rapport dans la base de données par appel de la procédure stockée addRapport
