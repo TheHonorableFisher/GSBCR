@@ -32,5 +32,22 @@ namespace GSBCR.DAL
             return vis;
         }
 
+        /// <summary>
+        /// Permet de mettre à jour le mot de passe d'un visiteur grâce à son matricule
+        /// </summary>
+        /// <param name="matricule">Matricule du visiteur</param>
+        /// <param name="mdp">Nouveau mot de passe du vistieur</param>
+        public void modifierMdp(String matricule, String mdp)
+        {
+            using (var context = new GSB_visite_groupe1Entities())
+            {
+                var v = context.VISITEUR.First(obj => obj.VIS_MATRICULE == matricule);
+
+                v.vis_mdp = mdp;
+
+                context.SaveChanges();
+            }
+        }
+
     }
 }

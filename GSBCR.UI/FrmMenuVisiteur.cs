@@ -106,5 +106,11 @@ namespace GSBCR.UI
             FrmConsulterPraticien f = new FrmConsulterPraticien(this.leVisiteur);
             f.ShowDialog();
         }
+
+        private void changerMonMotDePasseToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            FrmModifierMdp password = new FrmModifierMdp(VisiteurManager.loadVisiteur(leVisiteur.VIS_MATRICULE));
+            password.ShowDialog();
+        }
     }
 }
