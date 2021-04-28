@@ -112,5 +112,11 @@ namespace GSBCR.UI
             FrmModifierMdp password = new FrmModifierMdp(VisiteurManager.loadVisiteur(leVisiteur.VIS_MATRICULE));
             password.ShowDialog();
         }
+
+        private void modifierConsulterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmModiConsDonneesPerso donneePers = new FrmModiConsDonneesPerso(this.leVisiteur);
+            donneePers.ShowDialog();
+        }
     }
 }

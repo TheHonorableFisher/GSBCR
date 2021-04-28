@@ -63,8 +63,6 @@ namespace GSBCR.BLL
         /// <param name="addr">Adresse du visiteur</param>
         /// <param name="cp">Code Postal du visiteur</param>
         /// <param name="ville">Ville du visiteur</param>
-
-
         /// <returns>Booléen update (confirmer la modification)</returns>
         public static bool updateVisiteur(String mat, String addr, String cp, String ville)
         {
@@ -79,10 +77,6 @@ namespace GSBCR.BLL
             return update;
         }
 
-
-
-
-
         /// <summary>
         /// Permet de charger la dernière affectation du visiteur
         /// et donc son profil (visiteur, délégué, responsabe secteur) et sa région
@@ -94,6 +88,7 @@ namespace GSBCR.BLL
             VAFFECTATION vaff = new VaffectationDAO().FindByMatricule(matricule);
             return vaff;
         }
+
         /// <summary>
         /// Permet de charger les rapports non terminés du visiteur (état 1)
         /// </summary>
