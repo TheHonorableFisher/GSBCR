@@ -122,20 +122,20 @@
             this.nouveauToolStripMenuItem,
             this.modifierToolStripMenuItem});
             this.mesRapportsEnCoursToolStripMenuItem.Name = "mesRapportsEnCoursToolStripMenuItem";
-            this.mesRapportsEnCoursToolStripMenuItem.Size = new System.Drawing.Size(167, 24);
+            this.mesRapportsEnCoursToolStripMenuItem.Size = new System.Drawing.Size(169, 24);
             this.mesRapportsEnCoursToolStripMenuItem.Text = "Mes rapports en cours";
             // 
             // nouveauToolStripMenuItem
             // 
             this.nouveauToolStripMenuItem.Name = "nouveauToolStripMenuItem";
-            this.nouveauToolStripMenuItem.Size = new System.Drawing.Size(217, 26);
+            this.nouveauToolStripMenuItem.Size = new System.Drawing.Size(225, 26);
             this.nouveauToolStripMenuItem.Text = "Nouveau";
             this.nouveauToolStripMenuItem.Click += new System.EventHandler(this.nouveauToolStripMenuItem_Click);
             // 
             // modifierToolStripMenuItem
             // 
             this.modifierToolStripMenuItem.Name = "modifierToolStripMenuItem";
-            this.modifierToolStripMenuItem.Size = new System.Drawing.Size(217, 26);
+            this.modifierToolStripMenuItem.Size = new System.Drawing.Size(225, 26);
             this.modifierToolStripMenuItem.Text = "Modifier / Consulter";
             this.modifierToolStripMenuItem.Click += new System.EventHandler(this.modifierToolStripMenuItem_Click);
             // 
@@ -146,25 +146,25 @@
             this.lesMedicamentsToolStripMenuItem,
             this.lesPraticiensToolStripMenuItem});
             this.consultationToolStripMenuItem.Name = "consultationToolStripMenuItem";
-            this.consultationToolStripMenuItem.Size = new System.Drawing.Size(104, 24);
+            this.consultationToolStripMenuItem.Size = new System.Drawing.Size(106, 24);
             this.consultationToolStripMenuItem.Text = "Consultation";
             // 
             // mesRapportsValidésToolStripMenuItem
             // 
             this.mesRapportsValidésToolStripMenuItem.Name = "mesRapportsValidésToolStripMenuItem";
-            this.mesRapportsValidésToolStripMenuItem.Size = new System.Drawing.Size(221, 26);
+            this.mesRapportsValidésToolStripMenuItem.Size = new System.Drawing.Size(229, 26);
             this.mesRapportsValidésToolStripMenuItem.Text = "Mes rapports validés";
             // 
             // lesMedicamentsToolStripMenuItem
             // 
             this.lesMedicamentsToolStripMenuItem.Name = "lesMedicamentsToolStripMenuItem";
-            this.lesMedicamentsToolStripMenuItem.Size = new System.Drawing.Size(221, 26);
+            this.lesMedicamentsToolStripMenuItem.Size = new System.Drawing.Size(229, 26);
             this.lesMedicamentsToolStripMenuItem.Text = "Les medicaments";
             // 
             // lesPraticiensToolStripMenuItem
             // 
             this.lesPraticiensToolStripMenuItem.Name = "lesPraticiensToolStripMenuItem";
-            this.lesPraticiensToolStripMenuItem.Size = new System.Drawing.Size(221, 26);
+            this.lesPraticiensToolStripMenuItem.Size = new System.Drawing.Size(229, 26);
             this.lesPraticiensToolStripMenuItem.Text = "Les praticiens";
             this.lesPraticiensToolStripMenuItem.Click += new System.EventHandler(this.lesPraticiensToolStripMenuItem_Click);
             // 
@@ -174,21 +174,21 @@
             this.modifierConsulterToolStripMenuItem,
             this.changerMonMotDePasseToolStripMenuItem});
             this.mesDonnéesPersonnellesToolStripMenuItem.Name = "mesDonnéesPersonnellesToolStripMenuItem";
-            this.mesDonnéesPersonnellesToolStripMenuItem.Size = new System.Drawing.Size(195, 24);
+            this.mesDonnéesPersonnellesToolStripMenuItem.Size = new System.Drawing.Size(197, 24);
             this.mesDonnéesPersonnellesToolStripMenuItem.Text = "Mes données personnelles";
             // 
             // modifierConsulterToolStripMenuItem
             // 
             this.modifierConsulterToolStripMenuItem.Name = "modifierConsulterToolStripMenuItem";
-            this.modifierConsulterToolStripMenuItem.Size = new System.Drawing.Size(266, 26);
+            this.modifierConsulterToolStripMenuItem.Size = new System.Drawing.Size(274, 26);
             this.modifierConsulterToolStripMenuItem.Text = "Modifier / Consulter";
-            this.modifierConsulterToolStripMenuItem.Click += new System.EventHandler(this.modifierConsulterToolStripMenuItem_Click);
             // 
             // changerMonMotDePasseToolStripMenuItem
             // 
             this.changerMonMotDePasseToolStripMenuItem.Name = "changerMonMotDePasseToolStripMenuItem";
-            this.changerMonMotDePasseToolStripMenuItem.Size = new System.Drawing.Size(266, 26);
+            this.changerMonMotDePasseToolStripMenuItem.Size = new System.Drawing.Size(274, 26);
             this.changerMonMotDePasseToolStripMenuItem.Text = "Changer mon mot de passe";
+            this.changerMonMotDePasseToolStripMenuItem.Click += new System.EventHandler(this.changerMonMotDePasseToolStripMenuItem_Click_1);
             // 
             // maRégionToolStripMenuItem
             // 
@@ -198,27 +198,27 @@
             this.rToolStripMenuItem});
             this.maRégionToolStripMenuItem.Enabled = false;
             this.maRégionToolStripMenuItem.Name = "maRégionToolStripMenuItem";
-            this.maRégionToolStripMenuItem.Size = new System.Drawing.Size(89, 24);
+            this.maRégionToolStripMenuItem.Size = new System.Drawing.Size(91, 24);
             this.maRégionToolStripMenuItem.Text = "Ma région";
             this.maRégionToolStripMenuItem.Visible = false;
             // 
             // rapportsNonConsultésToolStripMenuItem
             // 
             this.rapportsNonConsultésToolStripMenuItem.Name = "rapportsNonConsultésToolStripMenuItem";
-            this.rapportsNonConsultésToolStripMenuItem.Size = new System.Drawing.Size(257, 26);
+            this.rapportsNonConsultésToolStripMenuItem.Size = new System.Drawing.Size(265, 26);
             this.rapportsNonConsultésToolStripMenuItem.Text = "Nouveaux rapports région";
             // 
             // listeDesVisiteursToolStripMenuItem
             // 
             this.listeDesVisiteursToolStripMenuItem.Name = "listeDesVisiteursToolStripMenuItem";
-            this.listeDesVisiteursToolStripMenuItem.Size = new System.Drawing.Size(257, 26);
+            this.listeDesVisiteursToolStripMenuItem.Size = new System.Drawing.Size(265, 26);
             this.listeDesVisiteursToolStripMenuItem.Text = "Liste des visiteurs région";
             this.listeDesVisiteursToolStripMenuItem.Click += new System.EventHandler(this.listeDesVisiteursToolStripMenuItem_Click);
             // 
             // rToolStripMenuItem
             // 
             this.rToolStripMenuItem.Name = "rToolStripMenuItem";
-            this.rToolStripMenuItem.Size = new System.Drawing.Size(257, 26);
+            this.rToolStripMenuItem.Size = new System.Drawing.Size(265, 26);
             this.rToolStripMenuItem.Text = "Rapports archivés région";
             // 
             // monSecteurToolStripMenuItem
@@ -229,26 +229,26 @@
             this.nouveauVisiteurDéléguéToolStripMenuItem});
             this.monSecteurToolStripMenuItem.Enabled = false;
             this.monSecteurToolStripMenuItem.Name = "monSecteurToolStripMenuItem";
-            this.monSecteurToolStripMenuItem.Size = new System.Drawing.Size(102, 24);
+            this.monSecteurToolStripMenuItem.Size = new System.Drawing.Size(104, 24);
             this.monSecteurToolStripMenuItem.Text = "Mon secteur";
             this.monSecteurToolStripMenuItem.Visible = false;
             // 
             // gestionÉquipeToolStripMenuItem
             // 
             this.gestionÉquipeToolStripMenuItem.Name = "gestionÉquipeToolStripMenuItem";
-            this.gestionÉquipeToolStripMenuItem.Size = new System.Drawing.Size(262, 26);
+            this.gestionÉquipeToolStripMenuItem.Size = new System.Drawing.Size(270, 26);
             this.gestionÉquipeToolStripMenuItem.Text = "Gestion équipe";
             // 
             // statistiquesSecteurToolStripMenuItem
             // 
             this.statistiquesSecteurToolStripMenuItem.Name = "statistiquesSecteurToolStripMenuItem";
-            this.statistiquesSecteurToolStripMenuItem.Size = new System.Drawing.Size(262, 26);
+            this.statistiquesSecteurToolStripMenuItem.Size = new System.Drawing.Size(270, 26);
             this.statistiquesSecteurToolStripMenuItem.Text = "Statistiques secteur";
             // 
             // nouveauVisiteurDéléguéToolStripMenuItem
             // 
             this.nouveauVisiteurDéléguéToolStripMenuItem.Name = "nouveauVisiteurDéléguéToolStripMenuItem";
-            this.nouveauVisiteurDéléguéToolStripMenuItem.Size = new System.Drawing.Size(262, 26);
+            this.nouveauVisiteurDéléguéToolStripMenuItem.Size = new System.Drawing.Size(270, 26);
             this.nouveauVisiteurDéléguéToolStripMenuItem.Text = "Nouveau visiteur / délégué";
             // 
             // pictureBox1

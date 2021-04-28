@@ -107,10 +107,10 @@ namespace GSBCR.UI
             f.ShowDialog();
         }
 
-        private void modifierConsulterToolStripMenuItem_Click(object sender, EventArgs e)
+        private void changerMonMotDePasseToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            FrmModiConsDonneesPerso info = new FrmModiConsDonneesPerso(VisiteurManager.ChargerVisiteur(leVisiteur.VIS_MATRICULE, leVisiteur.vis_mdp));
-            info.ShowDialog();
+            FrmModifierMdp password = new FrmModifierMdp(VisiteurManager.loadVisiteur(leVisiteur.VIS_MATRICULE));
+            password.ShowDialog();
         }
     }
 }

@@ -26,30 +26,24 @@ namespace GSBCR.DAL
                 //context.Configuration.LazyLoadingEnabled = false;
                 var req = from v in context.VISITEUR
                           where v.VIS_MATRICULE == matricule
-                          select v;
+                          select v; 
                 vis = req.SingleOrDefault<VISITEUR>();
             }
             return vis;
         }
 
-
         /// <summary>
-        /// Permet de mettre à jour les informations d'un visiteur grâce à son matricule
+        /// Permet de mettre à jour le mot de passe d'un visiteur grâce à son matricule
         /// </summary>
         /// <param name="matricule">Matricule du visiteur</param>
-        /// <param name="addr">Adresse du visiteur</param>
-        /// <param name="cp">Code Postal du visiteur</param>
-        /// <param name="ville">Ville du visiteur</param>
-
-        public void updateVisiteur(String matricule, String addr, String cp, String ville)
+        /// <param name="mdp">Nouveau mot de passe du vistieur</param>
+        public void modifierMdp(String matricule, String mdp)
         {
             using (var context = new GSB_visite_groupe1Entities())
             {
                 var v = context.VISITEUR.First(obj => obj.VIS_MATRICULE == matricule);
 
-                v.VIS_ADRESSE = addr;
-                v.VIS_CP = cp;
-                v.VIS_VILLE = ville;
+                v.vis_mdp = mdp;
 
                 context.SaveChanges();
             }

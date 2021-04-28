@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>GSBCR.UI</RootNamespace>
     <AssemblyName>GSBCR.UI</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
@@ -73,12 +73,6 @@
     <Compile Include="FrmConnexion.Designer.cs">
       <DependentUpon>FrmConnexion.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmConsulterMedicament.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmConsulterMedicament.Designer.cs">
-      <DependentUpon>FrmConsulterMedicament.cs</DependentUpon>
-    </Compile>
     <Compile Include="FrmConsulterPraticien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,11 +85,11 @@
     <Compile Include="FrmMenuVisiteur.designer.cs">
       <DependentUpon>FrmMenuVisiteur.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmModiConsDonneesPerso.cs">
+    <Compile Include="FrmModifierMdp.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmModiConsDonneesPerso.Designer.cs">
-      <DependentUpon>FrmModiConsDonneesPerso.cs</DependentUpon>
+    <Compile Include="FrmModifierMdp.Designer.cs">
+      <DependentUpon>FrmModifierMdp.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmRapportEnCours.cs">
       <SubType>Form</SubType>
@@ -114,17 +108,14 @@
     <EmbeddedResource Include="FrmConnexion.resx">
       <DependentUpon>FrmConnexion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmConsulterMedicament.resx">
-      <DependentUpon>FrmConsulterMedicament.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FrmConsulterPraticien.resx">
       <DependentUpon>FrmConsulterPraticien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMenuVisiteur.resx">
       <DependentUpon>FrmMenuVisiteur.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmModiConsDonneesPerso.resx">
-      <DependentUpon>FrmModiConsDonneesPerso.cs</DependentUpon>
+    <EmbeddedResource Include="FrmModifierMdp.resx">
+      <DependentUpon>FrmModifierMdp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmRapportEnCours.resx">
       <DependentUpon>FrmRapportEnCours.cs</DependentUpon>
