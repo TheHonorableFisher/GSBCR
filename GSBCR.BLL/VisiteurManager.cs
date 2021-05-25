@@ -233,9 +233,10 @@ namespace GSBCR.BLL
         /// Permet de charger un praticien à partir de son numéro
         /// <param name="pranum">entier</param>
         /// </summary>
-        public static PRATICIEN ChargerLePraticien(Int16 pranum)
+        public static PRATICIEN ChargerLePraticien(Int32 pranum)
         {
-            return null;
+            PRATICIEN lp = new PratricienDAO().FindById(Convert.ToInt16(pranum));
+            return lp;
         }
     }
 }

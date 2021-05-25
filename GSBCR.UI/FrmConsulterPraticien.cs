@@ -41,6 +41,29 @@ namespace GSBCR.UI
             btnVoirRapport.Visible = false;
         }
 
+        public FrmConsulterPraticien(VISITEUR v, int praticienNum)
+        {
+            InitializeComponent();
+
+            // Initialisation du visiteur actuelle
+            this.vis = v;
+
+            // Initialisation de liste déroulante des praticiens
+            PRATICIEN lp = VisiteurManager.ChargerLePraticien(praticienNum);
+            bsPraticien.DataSource = lp;
+            cbxPraticien.DataSource = bsPraticien;
+            cbxPraticien.DisplayMember = "PRA_NOM";
+            cbxPraticien.ValueMember = "PRA_NUM";
+            cbxPraticien.SelectedIndex = -1;
+
+
+            this.rapports = VisiteurManager.ChargerRapportVisite(v.VIS_MATRICULE);
+
+            // On cache l'affichage du praticien et du bouton rapport
+            ucPraticien1.Visible = false;
+            btnVoirRapport.Visible = false;
+        }
+
         private void btnQuitter_Click(object sender, EventArgs e)
         {
             this.Close();

@@ -251,7 +251,7 @@ namespace GSBCR.UI
         {
             if (txtNumPraticien.Text != "")
             {
-                FrmConsulterPraticien consultPrati = new FrmConsulterPraticien(r.LeVisiteur);
+                FrmConsulterPraticien consultPrati = new FrmConsulterPraticien(r.LeVisiteur, Convert.ToInt32(txtNumPraticien.Text));
                 consultPrati.ShowDialog();
             }
             else
