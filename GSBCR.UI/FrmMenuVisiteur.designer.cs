@@ -156,6 +156,7 @@
             this.lesMedicamentsToolStripMenuItem.Name = "lesMedicamentsToolStripMenuItem";
             this.lesMedicamentsToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
             this.lesMedicamentsToolStripMenuItem.Text = "Les medicaments";
+            this.lesMedicamentsToolStripMenuItem.Click += new System.EventHandler(this.lesMedicamentsToolStripMenuItem_Click);
             // 
             // lesPraticiensToolStripMenuItem
             // 

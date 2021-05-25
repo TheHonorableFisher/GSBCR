@@ -50,7 +50,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(29, 37);
+            this.label1.Location = new System.Drawing.Point(32, 37);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(65, 13);
             this.label1.TabIndex = 0;
@@ -142,7 +142,7 @@
             // 
             // txtbxDepot
             // 
-            this.txtbxDepot.Location = new System.Drawing.Point(100, 34);
+            this.txtbxDepot.Location = new System.Drawing.Point(103, 34);
             this.txtbxDepot.Name = "txtbxDepot";
             this.txtbxDepot.Size = new System.Drawing.Size(100, 20);
             this.txtbxDepot.TabIndex = 12;

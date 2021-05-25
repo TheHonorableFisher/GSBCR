@@ -223,17 +223,41 @@ namespace GSBCR.UI
         }
         private void btnVoirmed1_Click(object sender, EventArgs e)
         {
-            //to do
+            if (txtMed1.Text != "")
+            {
+                FrmConsulterMedicament fenMedoc1 = new FrmConsulterMedicament(r.LeVisiteur, (MEDICAMENT)cbxMed1.SelectedItem);
+                fenMedoc1.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Aucun médicament sélectionné", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
         }
 
         private void btnVoirMed2_Click(object sender, EventArgs e)
         {
-            //to do
+            if (txtMed1.Text != "")
+            {
+                FrmConsulterMedicament fenMedoc1 = new FrmConsulterMedicament(r.LeVisiteur, (MEDICAMENT)cbxMed2.SelectedItem);
+                fenMedoc1.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Aucun médicament sélectionné", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
         }
 
         private void btnVoirPatricien_Click(object sender, EventArgs e)
         {
-            //to do
+            if (txtNumPraticien.Text != "")
+            {
+                FrmConsulterPraticien consultPrati = new FrmConsulterPraticien(r.LeVisiteur);
+                consultPrati.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Aucun praticien sélectionné", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
         }
 
         private void cbxNomPraticien_Validating(object sender, CancelEventArgs e)

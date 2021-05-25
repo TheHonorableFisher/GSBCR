@@ -118,5 +118,11 @@ namespace GSBCR.UI
             FrmModiConsDonneesPerso donneePers = new FrmModiConsDonneesPerso(this.leVisiteur);
             donneePers.ShowDialog();
         }
+
+        private void lesMedicamentsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmConsulterMedicament m = new FrmConsulterMedicament(this.leVisiteur);
+            m.ShowDialog();
+        }
     }
 }
